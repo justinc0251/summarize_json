@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title class="title">Article Summarizer</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css')}}"
+    />
+</head>
+<body>
+    <h1>Article Summarizer</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".json">
+        <input type="submit" value="Upload JSON">
+    </form>
+
+    {% if original_texts %}
+    {% for original_text, summary in original_texts %}
+    <div class="summary-block">
+        <h3>Original Text:</h3>
+        <textarea rows="10" readonly>{{ original_text }}</textarea>
+        <h3>Summary:</h3>
+        <textarea rows="5" readonly>{{ summary }}</textarea>
+    </div>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>

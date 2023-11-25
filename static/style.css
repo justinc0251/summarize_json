@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(220, 250, 255);
+}
+
+textarea {
+  width: 70%;
+  margin: 10px 0;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  resize: none;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.summary-block {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+h2 {
+  color: #333;
+}
