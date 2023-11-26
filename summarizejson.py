@@ -32,8 +32,9 @@ def index():
                 for item in json_data:
                     if 'content' in item:
                         original_text = item['content']
+                        article_title = item['title']
                         summarized_text = summarize_with_bart(original_text)
-                        summaries.append((original_text, summarized_text))
+                        summaries.append((article_title, original_text, summarized_text))
         
             return render_template('index.html', original_texts=summaries)
 
