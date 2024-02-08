@@ -19,11 +19,11 @@ body {
 }
 
 textarea {
-  width: 70%;
   margin: 10px 0;
   border-radius: 1rem;
   padding: 0.5rem;
   resize: none;
+  width: 800px;
 }
 
 .title {
@@ -31,10 +31,19 @@ textarea {
 }
 
 .summary-block {
+  display: flex;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   padding: 10px;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 h2 {
   color: #333;
+}
+
+img {
+  height: 300px;
+  width: 300px;
 }
