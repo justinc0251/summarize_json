@@ -14,20 +14,24 @@
       <input type="file" name="file" accept=".json" />
       <input type="submit" value="Upload JSON" />
     </form>
-
-    {% if original_texts %} {% for article_title, original_text, summary,
-    image_url in original_texts %}
+    {% if original_texts %} {% for article_title, original_text,
+    summarized_text, emotions, image_url in original_texts %}
     <div class="summary-block">
       <div class="text">
         <h3>Article Title: {{ article_title }}</h3>
-
         <h3>Original Text:</h3>
         <textarea rows="10" readonly>{{ original_text }}</textarea>
         <h3>Summary:</h3>
-        <textarea rows="5" readonly>{{ summary }}</textarea>
+        <textarea rows="5" readonly>{{ summarized_text }}</textarea>
+        <h3>Emotions:</h3>
+        <ul>
+          {% for emotion, score in emotions.items() %}
+          <li>{{ emotion }}: {{ score }}</li>
+          {% endfor %}
+        </ul>
       </div>
       <div class="image">
-        <img src="{{ image_url }}" alt="Generated Image" />
+        <img src="{{ image_url }}" alt="Generated Image">
       </div>
     </div>
     {% endfor %} {% endif %}

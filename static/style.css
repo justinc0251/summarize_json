@@ -26,12 +26,17 @@ textarea {
   width: 800px;
 }
 
+li {
+  list-style: none;
+}
+
 .title {
   margin-bottom: 0.5rem;
 }
 
 .summary-block {
   display: flex;
+  flex-direction: row;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   padding: 10px;
